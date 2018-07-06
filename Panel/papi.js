@@ -7,7 +7,6 @@
     addEvt('button.record-button', 'click', function() {
       record = true;
       resetList();
-      curObjs = { flag: 1 };
       chrome.devtools.inspectedWindow.reload({});
     });
 
@@ -15,7 +14,6 @@
     addEvt('button.compare-button', 'click', function() {
       record = false;
       resetList();
-      curObjs = { flag: 1 };
       chrome.devtools.inspectedWindow.reload({});
     });
 
@@ -23,7 +21,7 @@
       chrome.devtools.network.onNavigated.addListener(resetList);
       chrome.devtools.network.onRequestFinished.addListener(function(request) {
         // push each request to storage using url as key
-        let url = request.request.url;
+        const url = request.request.url;
         if (request.response.content.mimeType === 'application/json') {
           request.getContent(function(currentContent) {
             // if recording, save api's detail in local storage
@@ -31,7 +29,7 @@
               chrome.storage.local.set({ [url]: currentContent }, function() {
                 console.log('response saved for the url ', url);
               });
-              updateUI(request.request.url, record);
+              updateUI(url, record);
             } else {
               // else compare
               chrome.storage.local.get(url, function(result) {
@@ -39,10 +37,10 @@
                 const diff = DeepDiff(JSON.parse(prevContent), JSON.parse(currentContent));
                 if (diff) {
                   console.log('API ', url, 'response has changed');
-                  updateUI(request.request.url, record, diff);
+                  updateUI(url, record, diff);
                 } else {
                   console.log('api ', url, ' response is consistant');
-                  updateUI(request.request.url, record);
+                  updateUI(url, record);
                 }
               });
             }
