@@ -1,4 +1,4 @@
-### PAPI - check backend APIs consistency
+### PAPI - chrome extension to check consistency of backend APIs 
 Helps to debug the issue when fronend breaks during page reloads.
 Shows if any APIs response or header has changed.
 
@@ -10,16 +10,16 @@ A couple of times I ran into an issue where frontend application state was chang
 ### Install
 I will publish this to chromestore soon and update the link here
 
-#### todos
-[ ] pulish to chrome app store
-[ ] compare headers  
-[ ] give filtering option  
-[ ] let the user choose the response types
+#### todos  
+- [ ] pulish to chrome app store
++ [ ] compare headers  
+- [ ] give filtering option  
++ [ ] let the user choose the response types
 
 ### credits
-icon by [creativestall from thenounproject](https://thenounproject.com/creativestall/)
-[https://github.com/mooring/chrome-extensions](https://github.com/mooring/chrome-extensions) used this get started with.
-Used [deep-diff](https://github.com/flitbit/diff/) to generate json response diff
+icon by [creativestall from thenounproject](https://thenounproject.com/creativestall/)  
+[https://github.com/mooring/chrome-extensions](https://github.com/mooring/chrome-extensions) used this get started with.  
+Used [deep-diff](https://github.com/flitbit/diff/) to generate json response diff  
 
 ### license
 MIT
