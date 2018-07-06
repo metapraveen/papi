@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <link rel='stylesheet' href='papi.css'>
+</head>
+
+<body>
+    <div class="header">
+        <h2 class='newspaper' align="bottom">PAPI - API double checker
+            <a class="github" target="_blank" href="https://github.com/praveen612/papi">source on GitHub</a>
+        </h2>
+
+        <div class="buttons">
+            <button class='refresh-button operate-btn record-button' title="Refresh Resources">Record</button>
+            <button class='clear-button operate-btn compare-button' title="Clear List">Compare</button>
+        </div>
+    </div>
+
+    <ol class='newspaper preprocessed-urls'>
+    </ol>
+
+    <script src="deep-diff.min.js"></script>
+    <script src="papi.js"></script>
+</body>
+
+</html>

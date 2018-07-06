@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.newspaper {
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', Sans-Serif;
+}
+
+.header {
+  background: #fff !important;
+  display: block;
+  font-size: 12px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.header .newspaper {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.preprocessed-urls {
+  position: absolute;
+  top: 85px;
+  z-index: 1;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.preprocessed-urls a {
+  color: #333333;
+  text-decoration: none;
+}
+.preprocessed-urls a.inspector {
+  font-weight: 600;
+  text-indent: -999999px;
+  background-image: url(info.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  display: inline-block;
+}
+
+.preprocessed-urls a:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  overflow: hidden;
+}
+
+.github {
+  font-size: 10px;
+  color: #333333;
+}
+
+.operate-btn {
+  float: left;
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0px 5px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-color: #eaeaea;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #f3f3f3),
+    color-stop(1, #e0e0e0)
+  );
+  background: -moz-linear-gradient(center top, #f3f3f3 0%, #e0e0e0 100%);
+}
+
+.operate-btn:active {
+  background-color: #e0e0e0;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #e0e0e0),
+    color-stop(1, #f3f3f3)
+  );
+  background: -moz-linear-gradient(center top, #e0e0e0 0%, #f3f3f3 100%);
+}
+
+.more-info {
+  position: absolute;
+  top: 36px;
+  right: 10px;
+  z-index: 9999;
+  border: 1px solid #eee;
+  background: #aaa;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.more-info img {
+  width: 100%;
+}
+
+ol.newspaper {
+  font-size: 12px;
+  text-align: left;
+}
+
+ol.newspaper li,
+.details table > tbody > tr {
+  position: relative;
+  border-left: 1px solid #e1e1e1;
+  padding: 5px;
+  background-color: #eee;
+  vertical-align: top;
+  text-overflow: ellipsis;
+}
+
+ol.newspaper li:nth-child(2n),
+.details table > tbody > tr:nth-child(2n) {
+  background-color: #fff;
+}
+
+ol.newspaper li:hover {
+  background-color: #ddeeff;
+}
+
+.no-diff {
+  color: #89b989;
+}
+
+.diff {
+  color: #c16363;
+}
+
+code {
+  font-weight: bold;
+}
